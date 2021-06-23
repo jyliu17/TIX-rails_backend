@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
 
-    # def index
-    #     users = User.all
-    #     render json: users
-    # end
+    def index
+        users = User.all
+        render json: users
+    end
 
-    def login 
+    def login
         # get the username and password from params
         #lookup a user with their username and password
         #otherwise return some error
-        user = User.find_by(username: params[:username])
+        user = User.find_by(email: params[:email])
         if user && user.authenticate(params[:password])
         #fake auth
         render json: user
-        else 
+        else
         render json: {errors:["Invalid username or password"]}
         end
     end
