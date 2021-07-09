@@ -31,7 +31,14 @@ User.create(
   is_agent: true,
   is_admin: true
 )
-
+User.create(
+  email: "Michelle@flatiron.com",
+  password: "123",
+  firstname: "Michelle",
+  lastname: "Pathe",
+  is_agent: false,
+  is_admin: false
+)
 
 Ticket.create(
     name: "IT Issue",
