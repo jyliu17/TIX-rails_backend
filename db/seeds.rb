@@ -4,9 +4,34 @@ User.create(
   password: "123",
   firstname: "Ian",
   lastname: "McKalan",
-  is_agent: TRUE,
-  is_admin: TRUE
+  is_agent: true,
+  is_admin: true
 )
+User.create(
+  email: "Sunjet@flatiron.com",
+  password: "123",
+  firstname: "SunJet",
+  lastname: "Liu",
+  is_agent: true,
+  is_admin: true
+)
+User.create(
+  email: "Johnson@flatiron.com",
+  password: "123",
+  firstname: "Johnson",
+  lastname: "Liu",
+  is_agent: true,
+  is_admin: true
+)
+User.create(
+  email: "Greg@flatiron.com",
+  password: "123",
+  firstname: "Greg",
+  lastname: "Dwyer",
+  is_agent: true,
+  is_admin: true
+)
+
 
 Ticket.create(
     name: "IT Issue",
@@ -25,3 +50,4 @@ Ticket.create(
     priority: "2",
 )
 UserTicket.create( user_id: 1, ticket_id: 1)
+UserTicket.create( user_id: 2, ticket_id: 2)
